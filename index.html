@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Valentín 💖</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            background-color: pink;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+            color: white;
+            background: red;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .yes {
+            background-color: green;
+            color: white;
+        }
+        .no {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>¿MI AMOR, MI ESPOSA QUERIDA, EL AMOR DE MI VIDA, QUIERES SER MI SAN VALENTÍN ESTE 14 DE FEBRERO? 💘</h1>
+    <div class="buttons">
+        <button class="yes" onclick="aceptar()">Sí Acepto 💖</button>
+        <button class="no" onclick="rechazar()">No 💔</button>
+    </div>
+
+    <script>
+        let intentos = 0;
+        const textosNo = [
+            "¿Segura amor? 🥺",
+            "ya pues amor:( 🥺",
+            "porque sigues presionando ah! 😭",
+            "Chale le voy a decir a la pita 😠",
+            "Yo se que si quieres mi reina uwu",
+            "HASTA PROGRAMANDO ME ESTRESO QUE ME DIGAS QUE NO XD 🥶",
+            "Bueno ahora si ya se que diras que si 🥰",
+            "aunque digas que no, es un si UWU"
+        ];
+
+        function rechazar() {
+            if (intentos < textosNo.length) {
+                document.querySelector(".no").textContent = textosNo[intentos];
+                intentos++;
+            } else {
+                alert("¡Sabía que dirías que sí! 💖");
+                document.querySelector(".no").style.display = "none";
+            }
+        }
+
+        function aceptar() {
+            alert("¡Sabía que dirías que sí! ❤️💍");
+            document.querySelector(".buttons").innerHTML = "<h2>¡Te amo! 💕 De tu programador que tanto te ama, mi vida 🤍</h2>";
+        }
+    </script>
+
+</body>
+</html>
